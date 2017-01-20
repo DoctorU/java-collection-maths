@@ -39,10 +39,7 @@ public class AverageFunctions {
 	}
 
 	private static Double sum(Collection<Number> numbers) {
-		return numbers.stream().map(Number::doubleValue).reduce(0.0D, (a, b) -> sum(a, b));
+		return numbers.stream().map(Number::doubleValue).reduce(0.0D, (a, b) -> a + b);
 	}
 
-	private static double sum(Number a, Number b) {
-		return Double.sum(a.doubleValue(), b.doubleValue());
-	}
 }
