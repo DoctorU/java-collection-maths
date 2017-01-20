@@ -1,8 +1,9 @@
 package com.stevehobdell.mathematics;
 
+import static com.stevehobdell.mathematics.CoreFunctions.doubleStream;
+
 import java.util.Collection;
 import java.util.function.BinaryOperator;
-import java.util.stream.Stream;
 
 public class StatisticalFunctions {
 	public static Double standardDeviation(Collection<Number> data) {
@@ -13,8 +14,7 @@ public class StatisticalFunctions {
 
 		Double mean = AverageFunctions.mean(data);
 		int size = data.size() - 1;
-		Stream<Number> stream = data.stream();
-		return stream.map(Number::doubleValue).reduce(0.0D, varianceAccumulator(mean, size));
+		return doubleStream(data).reduce(0.0D, varianceAccumulator(mean, size));
 
 	}
 
