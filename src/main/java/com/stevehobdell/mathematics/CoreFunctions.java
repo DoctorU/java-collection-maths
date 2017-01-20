@@ -7,6 +7,9 @@ import java.util.stream.Stream;
 
 /**
  * Core data collection manipulation functions.
+ *
+ * No Unit Test for this class, because the functions here are implicitly used
+ * in other mathematics classes, and so are covered sufficiently.
  */
 class CoreFunctions {
 

@@ -11,4 +11,5 @@ public class BoundaryFunctions {
 	public static Double min(Collection<Number> data) {
 		return CoreFunctions.doubleStream(data).reduce(Math::min).orElse(Double.MIN_VALUE);
 	}
+
 }
